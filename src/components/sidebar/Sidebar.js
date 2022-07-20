@@ -1,5 +1,5 @@
 import "./sidebar.css"
-import { RssFeed, Chat, HelpOutline, Event, MusicNote } from "@mui/icons-material"
+import { RssFeed, Chat, HelpOutline, Search, MusicNote } from "@mui/icons-material"
 
 export default function Sidebar() {
     return (
@@ -19,15 +19,14 @@ export default function Sidebar() {
                         <span className="sidebarListItemText">Songs</span>
                     </li>
                     <li className="sidebarListItem">
+                        <Search className="sidebarListIcon"/>
+                        <span className="sidebarListItemText">Explore</span>
+                    </li>
+                    <li className="sidebarListItem">
                         <HelpOutline className="sidebarListIcon"/>
                         <span className="sidebarListItemText">Questions</span>
                     </li>
-                    <li className="sidebarListItem">
-                        <Event className="sidebarListIcon"/>
-                        <span className="sidebarListItemText">Events</span>
-                    </li>
                 </ul>
-                <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr"/>
                 { /*TODO: Link spotify get friends to this
                 <ul className="sidebarFriendsList">

@@ -1,6 +1,8 @@
 .sidebar {
-    flex: 3;
+    flex: 2;
     height: calc(100vh - 50px);
+    background-color: #191414;
+    color: #ffffff;
 }
 
 .sidebarWrapper {
@@ -15,10 +17,22 @@
 
 .sidebarListItem {
     display: flex;
+    height: 50px;
+    width: 90%;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 10px
 }
 
-.sidebarIcon {
+.sidebarListItem:hover {
+    background-color: #1db954;
+}
+
+.sidebarListIcon {
     margin-right: 15px;
+}
+
+.sidebarHr {
+    margin: 20px 0;
 }
