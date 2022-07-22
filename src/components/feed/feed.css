@@ -3,3 +3,30 @@
     height: calc(100vh - 50px);
     background-color: #535353;
 }
+
+.playlistBody {
+    width: 94%;
+    height: 90%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-around;
+}
+
+.playlistCard {
+    width: 15%;
+    height: 35%;
+    border-radius: 20px;
+    background-color: #191414;
+    border: 1px solid white;
+    color: #fefefe;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.playlistImage {
+    width: 100%;
+    border-radius: 15px;
+
+}

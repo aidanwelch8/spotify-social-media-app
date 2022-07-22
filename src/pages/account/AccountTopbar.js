@@ -1,9 +1,9 @@
-import "./topbar.css"
+import "./accountTopbar.css"
 import { Search, Chat, Notifications } from "@mui/icons-material"
 import { useEffect, useState } from "react";
 import apiClient from "../../pages/auth/Spotify";
 
-export default function Topbar() {
+export default function AccountTopbar() {
     const [ profileImg, setProfileImg ] = useState("/assets/defaultUserImg.jpeg");
     const [ username, setUsername ] = useState("");
 
@@ -17,10 +17,6 @@ export default function Topbar() {
         })
     }, []);
 
-    function handleAccountClick() {
-        window.location.pathname = "/account"
-    }
-
     function handleLogoClick() {
         window.location.pathname = "/";
     }
@@ -29,12 +25,6 @@ export default function Topbar() {
         <div className="topbarContainer">
             <div className="topbarLeft">
                 <span className="topbarLogo" onClick={handleLogoClick}>SpotifySocial</span>
-            </div>
-            <div className="topbarCenter">
-                <div className="searchbar">
-                    <Search className="searchIcon" />
-                    <input placeholder="Search for friends, posts, or songs" className="searchInput"/>
-                </div>
             </div>
             <div className="topbarRight">
                 <div className="topbarLinks">
@@ -51,7 +41,7 @@ export default function Topbar() {
                         <span className="topbarIconBadge">3</span>
                     </div>
                 </div>
-                <div className="profile" onClick={handleAccountClick}>
+                <div className="profile">
                     <span className="username">{username}</span>
                     <img src={profileImg} alt="" className="topbarProfileImg"/>
                 </div>

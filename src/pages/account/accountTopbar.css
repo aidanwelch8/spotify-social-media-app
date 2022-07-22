@@ -10,7 +10,7 @@
 }
 
 .topbarLeft {
-    flex: 3;
+    flex: 8;
 }
 
 .topbarLogo {
@@ -19,33 +19,6 @@
     font-weight: bold;
     color: #1db954;
     cursor: pointer;
-}
-
-.topbarCenter {
-    flex: 5;
-}
-
-.searchbar {
-    width: 100%;
-    height: 35px;
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.searchIcon {
-    font-size: 20px !important;
-    margin-left: 10px;
-}
-
-.searchInput {
-    border: none;
-    width: 70%;
-}
-
-.searchInput:focus {
-    outline: none;
 }
 
 .topbarRight {
