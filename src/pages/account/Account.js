@@ -1,4 +1,3 @@
-import AccountTopbar from "./AccountTopbar"
 import apiClient from "../auth/Spotify";
 import { useEffect, useState } from "react";
 import "./account.css"

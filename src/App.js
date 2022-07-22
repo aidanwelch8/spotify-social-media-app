@@ -1,9 +1,7 @@
 import Home from "./pages/home/Home"
 import Login from "./pages/auth/Login"
-import Account from "./pages/account/Account";
 import { useEffect, useState } from "react";
 import { setClientToken } from "./pages/auth/Spotify";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [token, setToken] = useState("");
@@ -23,8 +21,7 @@ function App() {
     }
   }, []);
 
-  return ( !token ? <Login /> : 
-  <Home />
+  return ( !token ? <Login /> : <Home />
   );
 }
 

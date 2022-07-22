@@ -1,6 +1,10 @@
 import "./sidebar.css"
 import { RssFeed, Chat, HelpOutline, Search, MusicNote } from "@mui/icons-material"
 
+function handleSongsClick() {
+    window.location.pathname = "/songs"
+}
+
 export default function Sidebar() {
     return (
         <div className="sidebar">
@@ -14,7 +18,7 @@ export default function Sidebar() {
                         <Chat className="sidebarListIcon"/>
                         <span className="sidebarListItemText">Messages</span>
                     </li>
-                    <li className="sidebarListItem">
+                    <li className="sidebarListItem" onClick={handleSongsClick}>
                         <MusicNote className="sidebarListIcon"/>
                         <span className="sidebarListItemText">Songs</span>
                     </li>

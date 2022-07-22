@@ -1,0 +1,8 @@
+.songs {
+    flex: 8;
+    height: calc(100vh - 50px);
+}
+
+.title {
+    background-color: blue;
+}

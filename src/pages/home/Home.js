@@ -4,6 +4,7 @@ import Feed from "../../components/feed/Feed"
 import Rightbar from "../../components/rightbar/Rightbar"
 import Account from "../account/Account"
 import AccountTopbar from "../account/AccountTopbar"
+import Songs from "../../components/songs/Songs"
 import "./home.css"
 
 
@@ -18,6 +19,12 @@ export default function Home() {
         case "/account":
             topbarComponent = <AccountTopbar />
             bodyComponents = <Account />
+            break
+        case "/songs":
+            topbarComponent = <Topbar />
+            bodyComponents = [<Sidebar />, <Songs />, <Rightbar />]
+            break
+        default:
             break
     }
 

@@ -1,5 +1,5 @@
 import "./topbar.css"
-import { Search, Chat, Notifications } from "@mui/icons-material"
+import { Chat, Notifications } from "@mui/icons-material"
 import { useEffect, useState } from "react";
 import apiClient from "../../pages/auth/Spotify";
 
@@ -17,12 +17,12 @@ export default function Topbar() {
         })
     }, []);
 
-    function handleAccountClick() {
-        window.location.pathname = "/account"
-    }
-
     function handleLogoClick() {
         window.location.pathname = "/";
+    }
+
+    function handleAccountClick() {
+        window.location.pathname = "/account";
     }
 
     return (
@@ -30,17 +30,7 @@ export default function Topbar() {
             <div className="topbarLeft">
                 <span className="topbarLogo" onClick={handleLogoClick}>SpotifySocial</span>
             </div>
-            <div className="topbarCenter">
-                <div className="searchbar">
-                    <Search className="searchIcon" />
-                    <input placeholder="Search for friends, posts, or songs" className="searchInput"/>
-                </div>
-            </div>
             <div className="topbarRight">
-                <div className="topbarLinks">
-                    <span className="topbarLink">Homepage</span>
-                    <span className="topbarLink">Timeline</span>
-                </div>
                 <div className="topbarIcons">
                     <div className="topbarIconItem">
                         <Chat />
