@@ -26,28 +26,28 @@ export default function AccountTopbar() {
     }
 
     return (
-        <div className="topbarContainer">
-            <div className="topbarLeft">
-                <span className="topbarLogo" onClick={handleLogoClick}>SpotifySocial</span>
+        <div className="accountTopbarContainer">
+            <div className="accountTopbarLeft">
+                <span className="accountTopbarLogo" onClick={handleLogoClick}>SpotifySocial</span>
             </div>
-            <div className="topbarRight">
-                <div className="topbarLinks">
-                    <span className="topbarLink">Homepage</span>
-                    <span className="topbarLink">Timeline</span>
+            <div className="accountTopbarRight">
+                <div className="accountTopbarLinks">
+                    <span className="accountTopbarLink">Homepage</span>
+                    <span className="accountTopbarLink">Timeline</span>
                 </div>
-                <div className="topbarIcons">
-                    <div className="topbarIconItem">
+                <div className="accountTopbarIcons">
+                    <div className="accountTopbarIconItem">
                         <Chat />
-                        <span className="topbarIconBadge">2</span>
+                        <span className="accountTopbarIconBadge">2</span>
                     </div>
-                    <div className="topbarIconItem">
+                    <div className="accountTopbarIconItem">
                         <Notifications />
-                        <span className="topbarIconBadge">3</span>
+                        <span className="accountTopbarIconBadge">3</span>
                     </div>
                 </div>
-                <div className="profile" onClick={handleAccountClick}>
+                <div className="accountProfile" onClick={handleAccountClick}>
                     <span className="username">{username}</span>
-                    <img src={profileImg} alt="" className="topbarProfileImg"/>
+                    <img src={profileImg} alt="" className="accountTopbarProfileImg"/>
                 </div>
             </div>
         </div>

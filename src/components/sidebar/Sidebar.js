@@ -5,12 +5,16 @@ function handleSongsClick() {
     window.location.pathname = "/songs"
 }
 
+function handleFeedClick() {
+    window.location.pathname = "/"
+}
+
 export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
                 <ul className="sidebarList">
-                    <li className="sidebarListItem">
+                    <li className="sidebarListItem" onClick={handleFeedClick}>
                         <RssFeed className="sidebarListIcon"/>
                         <span className="sidebarListItemText">Feed</span>
                     </li>

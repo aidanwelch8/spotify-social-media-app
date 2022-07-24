@@ -4,6 +4,7 @@ import { Container, Form } from "react-bootstrap"
 import { useState, useEffect } from "react"
 import apiClient from "../../pages/auth/Spotify"
 import TrackSearchResult from "./TrackSearchResult"
+import moment from "moment"
 
 export default function Songs() {
     const [ searchInput, setSearchInput ] = useState("");
@@ -16,15 +17,20 @@ export default function Songs() {
         apiClient.get("search?q=" + searchInput + "&type=track").then(function (response) {
             if (cancel) return
             setSearchResults(response.data.tracks.items.map(track => {
+                console.log(response.data);
                 const smallestAlbumImage = track.album.images.reduce((smallest, image) => {
                     if (image.height < smallest.height) return image
                     return smallest
                 }, track.album.images[0])
+                var tempDuration = moment.duration(track.duration_ms, 'milliseconds');
+                const getDuration = tempDuration.minutes() + ":" + (tempDuration.seconds() < 10 ? '0' : '') + tempDuration.seconds();
                 return {
                     artist: track.artists[0].name,
                     title: track.name,
                     uri: track.uri,
-                    albumUrl: smallestAlbumImage.url
+                    albumUrl: smallestAlbumImage.url,
+                    albumName: track.album.name,
+                    duration: getDuration
                 }
             }))
         })
